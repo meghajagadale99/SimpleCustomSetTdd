@@ -1,6 +1,8 @@
 package com.tw;
 
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public
@@ -19,4 +21,13 @@ class CustomSetTest {
         assertTrue(isEmpty);
     }
 
+    @Test
+    void shouldReturnFalseWhenSetIsNotEmpty() {
+        CustomSet customSet = new CustomSet();
+        customSet.add(1);
+
+        boolean isEmpty = customSet.isEmpty();
+
+        assertFalse(isEmpty);
+    }
 }
